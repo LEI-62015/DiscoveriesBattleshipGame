@@ -9,4 +9,4 @@
 Basic academic version of Battleship game to build upon.
 
 
-<img width="751" height="438" alt="image" src="https://github.com/user-attachments/assets/bb1f2085-9a41-4cdf-bd66-1e344badf0c1" />
+<img width="682" height="392" alt="image" src="https://github.com/user-attachments/assets/82b68f72-c1f6-41e2-a672-7aadbbe1dbeb" />
