@@ -1,4 +1,4 @@
-# Battleship | TDAA
+# Battleship | TDAA 
 | Nome    | Número |
 | ------- | ------ |
 | Afonso  | 99917  |
@@ -7,6 +7,8 @@
 | Afonso Teixeira  | 105514  |
 
 Basic academic version of Battleship game to build upon.
+
+LINK para wiki para návios: https://pt.wikipedia.org/wiki/Navio
 
 | Batalha Naval      | Descobrimentos | Inglês  | Dimensão | Nº de Navios |
 | ------------------ | -------------- | ------- | -------: | -----------: |
