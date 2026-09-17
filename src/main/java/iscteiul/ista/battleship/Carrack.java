@@ -1,5 +1,6 @@
 /**
- *
+ * Represents a Carrack ship in the game.
+ * A Carrack occupies three positions depending on its orientation.
  */
 package iscteiul.ista.battleship;
 
@@ -8,11 +9,15 @@ public class Carrack extends Ship {
     private static final String NAME = "Nau";
 
     /**
-     * @param bearing
-     * @param pos
+     * Creates a Carrack with a given orientation and starting position.
+     *
+     * @param bearing the direction the ship is facing
+     * @param pos the initial position of the Carrack
+     * @throws IllegalArgumentException if the bearing is invalid
      */
     public Carrack(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Carrack.NAME, bearing, pos);
+
         switch (bearing) {
             case NORTH:
             case SOUTH:
@@ -29,14 +34,13 @@ public class Carrack extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Returns the size of the Carrack.
      *
-     * @see battleship.Ship#getSize()
+     * @return the size (3)
      */
     @Override
     public Integer getSize() {
         return Carrack.SIZE;
     }
-
 }

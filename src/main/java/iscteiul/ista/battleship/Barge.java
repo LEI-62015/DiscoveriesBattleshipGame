@@ -1,5 +1,6 @@
 /**
- *
+ * Represents a Barge ship in the game.
+ * A Barge occupies a single position on the board.
  */
 package iscteiul.ista.battleship;
 
@@ -8,17 +9,23 @@ public class Barge extends Ship {
     private static final String NAME = "Barca";
 
     /**
-     * @param bearing - barge bearing
-     * @param pos     - upper left position of the barge
+     * Creates a Barge with a given orientation and initial position.
+     *
+     * @param bearing the direction the ship is facing
+     * @param pos the initial position of the barge
      */
     public Barge(Compass bearing, IPosition pos) {
         super(Barge.NAME, bearing, pos);
         getPositions().add(new Position(pos.getRow(), pos.getColumn()));
     }
 
+    /**
+     * Returns the size of the Barge.
+     *
+     * @return the size (1)
+     */
     @Override
     public Integer getSize() {
         return SIZE;
     }
-
 }
