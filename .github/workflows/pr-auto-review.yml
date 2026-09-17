@@ -1,0 +1,31 @@
+name: Auto Review Assignment
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  assign-reviewers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Assign reviewers dynamically
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            let reviewers = [];
+
+            if (pr.assignees.length > 0) {
+              reviewers = pr.assignees.map(a => a.login);
+            } else {
+              reviewers = ["", "", ""];
+            }
+
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              reviewers: reviewers
+            });
