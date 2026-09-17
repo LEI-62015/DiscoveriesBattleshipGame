@@ -20,7 +20,7 @@ jobs:
             if (pr.assignees.length > 0) {
               reviewers = pr.assignees.map(a => a.login);
             } else {
-              reviewers = ["LEI-129334", "LEI-62015", "LEI-99917"];
+              reviewers = ["LEI-129334", "LEI-62015", "LEI-99917", "LEI105514"];
             }
 
             await github.rest.pulls.requestReviewers({
