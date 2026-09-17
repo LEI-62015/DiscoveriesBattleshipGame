@@ -1,5 +1,6 @@
 /**
- *
+ * Represents a Caravel ship in the game.
+ * A Caravel occupies two positions depending on its orientation.
  */
 package iscteiul.ista.battleship;
 
@@ -8,8 +9,12 @@ public class Caravel extends Ship {
     private static final String NAME = "Caravela";
 
     /**
-     * @param bearing the bearing where the Caravel heads to
-     * @param pos     initial point for positioning the Caravel
+     * Creates a Caravel with a given orientation and starting position.
+     *
+     * @param bearing the direction the Caravel is facing
+     * @param pos the initial position of the Caravel
+     * @throws NullPointerException if bearing is null
+     * @throws IllegalArgumentException if bearing is invalid
      */
     public Caravel(Compass bearing, IPosition pos) throws NullPointerException, IllegalArgumentException {
         super(Caravel.NAME, bearing, pos);
@@ -31,17 +36,15 @@ public class Caravel extends Ship {
             default:
                 throw new IllegalArgumentException("ERROR! invalid bearing for the caravel");
         }
-
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Returns the size of the Caravel.
      *
-     * @see battleship.Ship#getSize()
+     * @return the size (2)
      */
     @Override
     public Integer getSize() {
         return SIZE;
     }
-
 }
