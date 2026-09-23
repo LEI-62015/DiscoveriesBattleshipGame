@@ -1,5 +1,7 @@
 /**
  * Enumeration representing possible directions (bearings) in the game.
+ * <p>
+ * Each direction is associated with a character representation.
  */
 package iscteiul.ista.battleship;
 

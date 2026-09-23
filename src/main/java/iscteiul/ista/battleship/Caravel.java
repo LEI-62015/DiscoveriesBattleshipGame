@@ -1,6 +1,7 @@
 /**
  * Represents a Caravel ship in the game.
- * A Caravel occupies two positions depending on its orientation.
+ * <p>
+ * A Caravel occupies two consecutive positions depending on its orientation.
  */
 package iscteiul.ista.battleship;
 
@@ -10,6 +11,7 @@ public class Caravel extends Ship {
 
     /**
      * Creates a Caravel with a given orientation and starting position.
+     * The ship is placed horizontally or vertically depending on the bearing.
      *
      * @param bearing the direction the Caravel is facing
      * @param pos the initial position of the Caravel
