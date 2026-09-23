@@ -81,7 +81,10 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Prints the ships in this fleet that are still afloat.
+     * Finds the ships in this fleet that are still afloat.
+     *
+     * @return a new list containing the ships that are still afloat,
+     *         or an empty list if none remain
      */
     @Override
     public List<IShip> getFloatingShips() {
@@ -160,8 +163,8 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * This operation prints all the ships of a fleet but not yet shot
-     */
+   * Prints the ships in this fleet that are still afloat.
+   */
     public void printFloatingShips() {
         printShips(getFloatingShips());
     }
