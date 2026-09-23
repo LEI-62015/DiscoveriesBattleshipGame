@@ -27,3 +27,15 @@ LINK para wiki para návios: https://pt.wikipedia.org/wiki/Navio
 
 
 <img width="682" height="392" alt="image" src="https://github.com/user-attachments/assets/82b68f72-c1f6-41e2-a672-7aadbbe1dbeb" />
+
+
+Quais as diferenças entre trabalhar via web e via IDE? Em que situações é preferível
+cada abordagem?
+
+Trabalhar via web é preferível quando é preciso algo rápido, acessível facilmente e quando colaboração é mais importante.
+Além disso, permite resolver conflitos, rever e dar merge a pull requests, e tem multiplas ferramentas que permitem monitorizar
+o desenvolvimento de cada indivíduo.
+
+O IDE, pelo outro lado, é melhor utilizado para tarefas de desenvolvimento e sessões de programação longas. Os IDEs garantem acesso
+a ferramentas mais avançadas como debugging tools, version control integration, além de, ambientes customizáveis para cada utilizador
+e as suas necessidades. Isto tudo, vai melhorar a qualidade de código e produtividade.
