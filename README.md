@@ -26,5 +26,4 @@ LINK para wiki para návios: https://pt.wikipedia.org/wiki/Navio
 | Submarino          | Barca          | Barge   |        1 |            4 |
 
 
-11111111
 <img width="682" height="392" alt="image" src="https://github.com/user-attachments/assets/82b68f72-c1f6-41e2-a672-7aadbbe1dbeb" />
