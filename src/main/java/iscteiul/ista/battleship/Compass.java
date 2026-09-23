@@ -1,5 +1,5 @@
 /**
- *
+ * Enumeration representing possible directions (bearings) in the game.
  */
 package iscteiul.ista.battleship;
 
@@ -11,19 +11,40 @@ public enum Compass {
 
     private final char c;
 
+    /**
+     * Constructs a Compass direction.
+     *
+     * @param c character representing the direction
+     */
     Compass(char c) {
         this.c = c;
     }
 
+    /**
+     * Returns the character associated with this direction.
+     *
+     * @return direction character
+     */
     public char getDirection() {
         return c;
     }
 
+    /**
+     * Returns the string representation of the direction.
+     *
+     * @return string with the direction character
+     */
     @Override
     public String toString() {
         return "" + c;
     }
 
+    /**
+     * Converts a character to a Compass value.
+     *
+     * @param ch character representing direction
+     * @return corresponding Compass value or UNKNOWN if invalid
+     */
     static Compass charToCompass(char ch) {
         Compass bearing;
         switch (ch) {
@@ -42,7 +63,6 @@ public enum Compass {
             default:
                 bearing = UNKNOWN;
         }
-
         return bearing;
     }
 }
