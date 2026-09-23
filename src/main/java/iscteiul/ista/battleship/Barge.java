@@ -1,6 +1,7 @@
 /**
  * Represents a Barge ship in the game.
- * A Barge occupies a single position on the board.
+ * <p>
+ * A Barge is the smallest type of ship and occupies a single position on the board.
  */
 package iscteiul.ista.battleship;
 
@@ -10,6 +11,7 @@ public class Barge extends Ship {
 
     /**
      * Creates a Barge with a given orientation and initial position.
+     * Since the Barge has size 1, it occupies only the given position.
      *
      * @param bearing the direction the ship is facing
      * @param pos the initial position of the barge
