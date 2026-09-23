@@ -1,8 +1,12 @@
 name: Auto Review Assignment
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   assign-reviewers:
@@ -15,17 +19,18 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
 
-            let reviewers = [];
+            const reviewers = pr.assignees.length > 0
+              ? pr.assignees.map(assignee => assignee.login)
+              : ["LEI-129334", "LEI-62015", "LEI-99917", "LEI105514"];
 
-            if (pr.assignees.length > 0) {
-              reviewers = pr.assignees.map(a => a.login);
-            } else {
-              reviewers = ["LEI-129334", "LEI-62015", "LEI-99917", "LEI105514"];
+            if (reviewers.length === 0) {
+              core.info("No reviewers to assign.");
+              return;
             }
 
             await github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.number,
-              reviewers: reviewers
+              reviewers
             });
