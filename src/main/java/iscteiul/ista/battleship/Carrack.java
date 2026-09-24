@@ -1,6 +1,7 @@
 /**
  * Represents a Carrack ship in the game.
- * A Carrack occupies three positions depending on its orientation.
+ * <p>
+ * A Carrack occupies three consecutive positions depending on its orientation.
  */
 package iscteiul.ista.battleship;
 
@@ -10,6 +11,7 @@ public class Carrack extends Ship {
 
     /**
      * Creates a Carrack with a given orientation and starting position.
+     * The ship is placed horizontally or vertically depending on the bearing.
      *
      * @param bearing the direction the ship is facing
      * @param pos the initial position of the Carrack

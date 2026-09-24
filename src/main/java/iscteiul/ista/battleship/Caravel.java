@@ -1,7 +1,3 @@
-/**
- * Represents a Caravel ship in the game.
- * A Caravel occupies two positions depending on its orientation.
- */
 package iscteiul.ista.battleship;
 /**
  * Representa uma caravela no jogo da Batalha Naval.
@@ -18,14 +14,15 @@ package iscteiul.ista.battleship;
  * @see Compass
  */
 public class Caravel extends Ship {
-
     private static final Integer SIZE = 2;
     private static final String NAME = "Caravela";
+
     /**
      * Cria uma caravela com uma orientação e posição inicial.
      *
      * <p>A caravela ocupa duas posições consecutivas
      * no tabuleiro, de acordo com a orientação indicada.</p>
+
      *
      * <p>As orientações NORTH e SOUTH correspondem
      * ao posicionamento vertical, enquanto EAST e WEST
@@ -59,12 +56,9 @@ public class Caravel extends Ship {
     }
 
     /**
-     * Obtém o tamanho da caravela.
+     * Returns the size of the Caravel.
      *
-     * <p>A caravela ocupa sempre duas posições
-     * consecutivas no tabuleiro.</p>
-     *
-     * @return o tamanho da caravela, igual a 2
+     * @return the size (2)
      */
     @Override
     public Integer getSize() {
