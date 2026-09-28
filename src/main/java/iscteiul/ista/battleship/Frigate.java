@@ -1,15 +1,22 @@
-/**
- *
- */
+
 package iscteiul.ista.battleship;
 
+/**
+ * Represents a frigate occupying four consecutive positions
+ * in a row or column of the board.
+ */
 public class Frigate extends Ship {
     private static final Integer SIZE = 4;
     private static final String NAME = "Fragata";
 
     /**
-     * @param bearing
-     * @param pos
+     * Creates a frigate starting at the specified position.
+     * NORTH and SOUTH use increasing row indices;
+     * EAST and WEST use increasing column indices.
+     *
+     * @param bearing the frigate's orientation
+     * @param pos the frigate's starting position
+     * @throws IllegalArgumentException if the orientation is unsupported
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
@@ -29,10 +36,10 @@ public class Frigate extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Returns the number of positions occupied by the frigate.
      *
-     * @see battleship.Ship#getSize()
+     * @return the frigate's size, always 4
      */
     @Override
     public Integer getSize() {
